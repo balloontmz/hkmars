@@ -10,10 +10,17 @@ Hong Kong Mars Culture Media Limited 企业形象展示站点。**纯静态**：
 
 ```
 hkmars/
-├── index.html          # 主页（单页锚点导航：公司简介 / 核心业务 / 产品展示 / 合作伙伴 / 未来展望）
-├── 404.html            # 404 兜底页
+├── index.html               # 首页（各板块摘要，链向子页面）
+├── about.html               # 公司简介（含发展历程）
+├── business.html            # 核心业务（四大板块详解）
+├── products.html            # 产品中心（在售产品 + 即将上市 + 销售渠道）
+├── product-astaxanthin.html # 产品详情：双抗虾青素胶囊（成分表、技术背书、AstaMAZ 授权书）
+├── product-oyster.html      # 产品详情：牡蛎袋鼠精华胶囊（成分表、五大卖点、专利认证）
+├── partners.html            # 合作伙伴
+├── future.html              # 未来展望（战略方向 + 商业闭环）
+├── 404.html                 # 404 兜底页
 ├── assets/
-│   ├── css/style.css   # 全部样式（响应式：1024 / 880 / 560 三档断点）
+│   ├── css/style.css   # 全部样式（响应式：1024 / 880 / 640 / 560 断点）
 │   ├── js/main.js      # 导航状态、移动端菜单、进场动画、返回顶部
 │   ├── favicon.svg     # 站点图标
 │   └── img/            # 站点图片素材（来自客户提供 PDF，见 cankao/）

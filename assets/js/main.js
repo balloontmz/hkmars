@@ -39,18 +39,20 @@
     }, { threshold: 0.12 });
     document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
 
-    // 当前栏目高亮
-    var navA = Array.prototype.slice.call(links.querySelectorAll('a'));
-    var io2 = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (e.isIntersecting) {
-          navA.forEach(function (a) {
-            a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id);
-          });
-        }
-      });
-    }, { rootMargin: '-45% 0px -50% 0px' });
-    document.querySelectorAll('main section[id]').forEach(function (s) { io2.observe(s); });
+    // 当前栏目高亮（仅首页按滚动切换，子页面用写死的 active）
+    if (document.body.dataset.page === 'home') {
+      var navA = Array.prototype.slice.call(links.querySelectorAll('a'));
+      var io2 = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            navA.forEach(function (a) {
+              a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id);
+            });
+          }
+        });
+      }, { rootMargin: '-45% 0px -50% 0px' });
+      document.querySelectorAll('main section[id]').forEach(function (s) { io2.observe(s); });
+    }
   } else {
     document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('in'); });
   }
