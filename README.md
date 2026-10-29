@@ -46,7 +46,8 @@ python -m http.server 8080
 1. 仓库根目录新增 `CNAME` 文件，内容为域名（如 `www.example.com`），提交；
 2. 域名解析添加：`www` 的 CNAME 记录指向 `balloontmz.github.io`；或裸域 A 记录指向
    `185.199.108.153` / `185.199.109.153` / `185.199.110.153` / `185.199.111.153`；
-3. 在 Settings → Pages → Custom domain 填入域名并开启 **Enforce HTTPS**。
+3. 在 Settings → Pages → Custom domain 填入域名并开启 **Enforce HTTPS**；
+4. 同步把 `robots.txt` 和 `sitemap.xml` 里的 `https://balloontmz.github.io/hkmars/` 换成新域名。
 
 ## 内容来源
 

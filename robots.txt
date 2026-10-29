@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://balloontmz.github.io/hkmars/sitemap.xml

@@ -4,19 +4,26 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>页面未找到 — 香港火星文化传媒有限公司</title>
+<meta name="robots" content="noindex">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="stylesheet" href="assets/css/style.css">
 <style>
-  .nf { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 24px; }
-  .nf h1 { font-size: 72px; color: var(--red); }
-  .nf p { color: var(--muted); margin: 10px 0 26px; }
+  body { background: var(--dark); min-height: 100vh; }
+  .nf { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 24px; position: relative; }
+  .nf::before { content: ""; position: absolute; inset: 0; background: url("assets/img/network.svg") center/cover no-repeat; opacity: .5; }
+  .nf > * { position: relative; }
+  .nf-brand { display: flex; align-items: center; gap: 10px; color: rgba(255, 255, 255, .85); font-size: 15px; letter-spacing: .12em; margin-bottom: 34px; }
+  .nf-dot { width: 26px; height: 26px; border-radius: 50%; flex: none; background: radial-gradient(circle at 35% 30%, #e8546c, var(--red) 55%, var(--red-deep)); box-shadow: 0 0 0 3px rgba(200, 16, 46, .18); }
+  .nf h1 { font-size: clamp(72px, 12vw, 120px); color: var(--red-soft); line-height: 1; text-shadow: 0 0 60px rgba(200, 16, 46, .45); }
+  .nf p { color: rgba(255, 255, 255, .6); margin: 16px 0 34px; letter-spacing: .06em; }
 </style>
 </head>
 <body>
   <div class="nf">
+    <p class="nf-brand"><span class="nf-dot" aria-hidden="true"></span>火星文化传媒 · MARS CULTURE MEDIA</p>
     <h1>404</h1>
     <p>页面未找到，请返回首页继续浏览。</p>
-    <a class="btn btn-primary" href="/">返回首页</a>
+    <a class="btn btn-primary" href="./">返回首页</a>
   </div>
 </body>
 </html>
